@@ -1995,7 +1995,7 @@ HostIF_InitUptime(void)
 void
 HostIF_CleanupUptime(void)
 {
-   del_timer_sync(&uptimeState.timer);
+   timer_delete_sync(&uptimeState.timer);
 }
 
 
