@@ -19,8 +19,8 @@
 
 INCLUDE := -I$(SRCROOT)
 
-flags-y := $(CC_OPTS) $(INCLUDE)
-flags-y += $(call vm_check_build, $(SRCROOT)/netif_trans_update.c,-DVMW_NETIF_TRANS_UPDATE, )
+ccflags-y := $(CC_OPTS) $(INCLUDE)
+ccflags-y += $(call vm_check_build, $(SRCROOT)/netif_trans_update.c,-DVMW_NETIF_TRANS_UPDATE, )
 
 obj-m += $(DRIVER).o
 
